@@ -8,5 +8,5 @@ bench('traverse', () => {
 }, { time: 30 })
 
 bench('ES6', () => {
-  const a: any = new Array(1000).fill(1)
+  new Array(1000).fill(1)
 }, { time: 30 })
