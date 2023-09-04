@@ -25,10 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-pkgs.json
-graph.json
-relations.json
-tree.json
-versions.json
-pkgs.txt
