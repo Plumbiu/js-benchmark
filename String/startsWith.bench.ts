@@ -11,7 +11,6 @@ function startsWith(str: string, startStr: string) {
 bench('String.prototype.startsWith', () => {
   for (let i = 0; i < 1000; i++) {
     let str = 'hello world!hello world!hello world!hello world!hello world!'
-    
     str.startsWith('hello world')
   }
 }, { time: 100 })
