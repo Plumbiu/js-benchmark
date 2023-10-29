@@ -12,11 +12,10 @@ export function fromEntries<T extends string | number | object>(
   return result
 }
 
-const arr = Object.entries(obj)
-
 bench(
   'Object.fromEntries',
   () => {
+    const arr = Object.entries(obj)
     Object.fromEntries(arr)
   },
 
@@ -26,7 +25,18 @@ bench(
 bench(
   'Origin Object',
   () => {
+    const arr = Object.entries(obj)
     fromEntries(arr)
+  },
+  { time: 1000 },
+)
+
+bench(
+  'key in Object',
+  () => {
+    for (const key in obj) {
+      (obj as any)[key]
+    }
   },
   { time: 1000 },
 )
